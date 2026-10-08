@@ -9,7 +9,7 @@ namespace Mission.Data
         public MissionDbContext(DbContextOptions<MissionDbContext> options)
             : base(options)
         {
-
+            
         }
 
         public DbSet<Categorie> Categories { get; set; }

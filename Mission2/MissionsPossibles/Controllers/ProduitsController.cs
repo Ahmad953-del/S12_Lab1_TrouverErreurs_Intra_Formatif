@@ -24,7 +24,16 @@ namespace Mission.Controllers
         public async Task<IActionResult> Index()
         {
             // COMPLÉTER ICI
-            return View();
+            //var produit = _context;
+            //foreach(var p in produit)
+            var produit = _context.Produits;
+            if(produit == null)
+            {
+                return NotFound();
+            }
+            return View(produit);
+
+            
         }
 
     }

@@ -49,8 +49,11 @@ namespace Mission.Controllers
         // GET: Produits/Create
         public IActionResult Create()
         {
-         
-            return View();
+            Produit produit = new();
+            ViewBag.CategorieId = new SelectList(_context.Categories,"Id","Titre");
+
+
+            return View(produit);
         }
 
         // POST: Produits/Create
